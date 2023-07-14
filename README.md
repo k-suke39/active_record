@@ -45,4 +45,6 @@
 
 ## 画面遷移図
 
--
+### figma
+
+- https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=yOyZ4hLhnCcdJhRr-1
