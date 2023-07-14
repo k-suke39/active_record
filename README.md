@@ -32,7 +32,6 @@
 - ActiveRecord 回答機能 (SELECT 文のみ)
   - 入門編、中級編あたりで考えています
   - それぞれの課題の作り方は SQL 関連の書籍から調査し考えていきたいです。
-- お気に入り機能
 - パンくず機能
 - 管理画面
 
@@ -45,6 +44,27 @@
 
 ## 画面遷移図
 
-### figma
+Figma：https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=QAkKcFt8p6tVpRb0-1
 
-- https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=yOyZ4hLhnCcdJhRr-1
+### README に記載した機能
+
+- [x] ログイン機能
+- [x] ActiveRecord 回答機能 (SELECT 文のみ)
+- [x] パンくず機能
+- [x] 管理画面ログイン機能
+- [x] 管理画面投稿機能
+- [x] 管理画面編集機能
+- [x] 管理画面削除機能
+
+### 未ログインでも閲覧 or 利用できるページ
+
+以下の項目はちゃんと未ログインでも閲覧 or 利用できる画面遷移になっているか？
+
+- [x] レッスン一覧ページ
+- [x] CHAPTER 一覧ページ
+
+### 想定 URL
+
+[こちら](https://xd.adobe.com/view/53d16b6b-bcdf-479b-4e6a-a67539af96c5-25e0/grid/)と同様に URL を記載している場合は違和感がないものになっているか？（必須ではありません）
+
+- [x] 特に記載していない or 特に違和感を感じなかった
