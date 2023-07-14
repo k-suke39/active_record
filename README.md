@@ -41,3 +41,7 @@
   - User.save, update, destroy あたりはユーザごとに一時的にテーブルを用意する必要あると考えている為、実装の難易度が高い認識です。一方で、ActiveRecord の醍醐味は find_by や where などで関連テーブルのレコードを取得できるかどうかが主な操作のため、学習としての観点からは、User.save, update, destroy あたりは単純操作であるため、そこまで優先度は高くないと思っています。
 - Twitter 共有機能
 - 修了証機能
+
+## 画面遷移図
+
+Figma：https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=QAkKcFt8p6tVpRb0-1
