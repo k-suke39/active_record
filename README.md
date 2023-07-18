@@ -45,3 +45,8 @@
 ## 画面遷移図
 
 Figma：https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=QAkKcFt8p6tVpRb0-1
+
+## ER 図
+
+https://dbdiagram.io/d/64b6184b02bd1c4a5e3e17e7
+[![Image from Gyazo](https://i.gyazo.com/69c04bd03b9021f6b7c096f16859427f.png)](https://gyazo.com/69c04bd03b9021f6b7c096f16859427f)
