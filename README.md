@@ -49,5 +49,4 @@ Figma：https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=de
 ## ER 図
 
 https://dbdiagram.io/d/64b6184b02bd1c4a5e3e17e7
-
-<iframe width="560" height="315" src='https://dbdiagram.io/embed/64b6184b02bd1c4a5e3e17e7'></iframe>
+[![Image from Gyazo](https://i.gyazo.com/69c04bd03b9021f6b7c096f16859427f.png)](https://gyazo.com/69c04bd03b9021f6b7c096f16859427f)
