@@ -1,0 +1,42 @@
+name: "Ruby on Rails CI"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ] 
+jobs:
+  setup_and_test_execution:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: 1234
+          MYSQL_ROOT_HOST: '%'
+        ports:
+          - 3306:3306
+        options: --health-cmd "mysqladmin ping -h 127.0.0.1" --health-interval 20s --health-timeout 10s --health-retries 10
+    steps:
+    - name: Checkout from Repository
+      uses: actions/checkout@v2
+    
+    - name: Setup Ruby version
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: 3.1.x
+          
+    - name: bundle install
+      run: |
+        bundle install --jobs 4 --retry 3
+    
+    - name: Setup Database
+      env:
+        RAILS_ENV: test
+      run: |
+        cp config/database.yml.ci config/database.yml
+        bundle exec rake db:create
+        bundle exec rake db:migrate
+    - name: Run RSpec
+      run: bundle exec rspec
+      env:
+        RAILS_ENV: test
