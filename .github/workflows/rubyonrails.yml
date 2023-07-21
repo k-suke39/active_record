@@ -1,4 +1,4 @@
-name: run Rspec
+name: run CI
 
 on: [push, pull_request]
 
@@ -40,3 +40,6 @@ jobs:
       - name: Run rails rspec
         run: |
           bundle exec rspec
+      - name: Run rails rubocop
+        run: |
+          bundle exec rubocop
