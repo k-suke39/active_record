@@ -1,0 +1,41 @@
+name: run Rspec
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    services:
+      postgres:
+        image: postgres:14
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: password
+
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Ruby 3.1
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.1
+        bundler-cache: true
+
+    - name: Create and migrate database
+      run: |
+        bundle exec rails db:create RAILS_ENV=test
+        bundle exec rails db:migrate RAILS_ENV=test
+
+    - name: Run rails rspec
+      run: |
+        bundle exec rspec
