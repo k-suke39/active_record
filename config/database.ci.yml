@@ -1,0 +1,13 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  pool: 5
+
+  username: postgres
+  password: password
+
+test:
+  <<: *default
+  database: circle_test
