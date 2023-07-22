@@ -7,12 +7,12 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-      <%= render(HeaderComponent.new) %>
+  <body class="bg-color-primary">
+      <%= render(Header::Component.new) %>
       <%= yield %>
+      <%= render(Footer::Component.new) %>
   </body>
 </html>
