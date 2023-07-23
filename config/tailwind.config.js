@@ -14,7 +14,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        "color-primary": "#01051e",
+        "color-primary": "#073752",
       },
       container: {
         center: true,
