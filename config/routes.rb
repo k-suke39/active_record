@@ -2,5 +2,7 @@
 
 Rails.application.routes.draw do
   root 'home#top'
+
+  resources :chapters, only: %i[index show]
   resources :lessons
 end
