@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   resources :lessons, only: [:index]
   resources :chapters, only: [:index]
-  resources :practices, only: [:index]
+  resources :practices
 end

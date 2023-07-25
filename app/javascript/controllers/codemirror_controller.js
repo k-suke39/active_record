@@ -1,6 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
 import { basicSetup, EditorView } from "codemirror";
-import { StreamLanguage } from "@codemirror/language";
 
 // Connects to data-controller="codemirror"
 export default class extends Controller {
