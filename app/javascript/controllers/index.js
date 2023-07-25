@@ -6,8 +6,8 @@ import { application } from "controllers/application";
 import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading";
 eagerLoadControllersFrom("controllers", application);
 
-import CodemirrorController from "./codemirror_controller";
-application.register("codemirror", CodemirrorController);
+// import CodemirrorController from "./codemirror_controller";
+// application.register("codemirror", CodemirrorController);
 
 import HelloController from "./hello_controller";
 application.register("hello", HelloController);

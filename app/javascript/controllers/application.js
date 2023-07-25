@@ -1,5 +1,4 @@
 import { Application } from "@hotwired/stimulus";
-import { Codemirror } from "@codemirror";
 
 const application = Application.start();
 
