@@ -1,0 +1,30 @@
+<%= turbo_frame_tag "modal" do %>
+  <div class="fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+  <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+  
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+
+    
+    <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+    <div class="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+      <h1 class="text-red-300 font-bold text-5xl mb-4">正解</h1>
+      <h3 class="text-black-100 font-bold text-3xl mb-4">おめでとうございます！</h3>
+      <%= form_with(url: '#', id: "profile_form") do |form| %>
+       <img
+              src="./assets/undraw_Designer.png"
+              alt="developer"
+              class="max-w-full mx-auto"
+            />
+
+  <div class="flex justify-between">
+    <%= form.submit value: '戻る',class: "cursor-pointer inline-flex items-left px-4 py-2 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4" %>
+    <%= form.submit value: '次の問題に進む',class: "cursor-pointer inline-flex items-right px-4 py-2 border border-gray-300 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mr-4" %>
+  </div>
+
+  
+<% end %>
+    </div>
+  </div>
+</div>
+<% end%>

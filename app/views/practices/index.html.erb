@@ -1,4 +1,81 @@
-<div>
-  <h1 class="font-bold text-4xl">Practices#index</h1>
-  <p>Find me in app/views/practices/index.html.erb</p>
-</div>
+<header class="text-gray-600 body-font">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <span class="text-3xl font-bold">Active Recorder</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a class="mr-5 hover:text-gray-900">HOME</a>
+      <a class="mr-5 hover:text-gray-900">SERVICE</a>
+      <a class="mr-5 hover:text-gray-900">CONTACT</a>
+    </nav>
+    <button class="inline-flex items-center bg-color-primary text-white py-3 px-8  rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"><i class="fa-brands fa-github fa-fw"></i>
+      GitHub
+    </button>
+  </div>
+</header>
+
+    <div class="flex flex-col text-center w-full pt-10">
+      <h2 class="text-xs text-color-primary tracking-widest font-bold title-font mb-1">TRIAL</h2>
+      <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900">CHAPTER 1</h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-base"></p>
+    </div>
+
+
+<section class="text-gray-600 body-font">
+  <div class="container px-5 py-6 mx-auto">
+  <!-- banner - start -->
+    <div class="relative flex flex-wrap rounded-lg bg-color-primary px-4 py-3 mb-10 shadow-lg sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+      <div class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-white sm:order-none sm:mb-0 sm:w-auto md:text-base">usersテーブルから全てのレコードを取得してください</div>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 p-8 rounded">
+        <a class="sm:px-6 py-3 w-1/4 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold bg-gray-100 inline-flex items-center leading-none border-color-primary text-color-primary tracking-wider rounded-t">
+         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>エディタ
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>発行SQL
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg>実行結果
+      </a>
+          <div data-controller="codemirror"><div data-codemirror-target="editor"></div></div>
+        </div>
+      </div>
+      <div class="p-4 md:w-1/2 w-full">
+        <div class="h-full bg-gray-100 p-8 rounded">
+              <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>DB
+      </a>
+      <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>ER図
+       </a>
+       <a class="sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5 mr-3" viewBox="0 0 24 24">
+              <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+              <path d="M22 4L12 14.01l-3-3"></path>
+            </svg> 想定結果
+       </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<%= link_to 'モーダルを開く',new_practice_path, data: { turbo_frame: "modal"}%>
+
+
+
+
