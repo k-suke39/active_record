@@ -12,6 +12,7 @@ class PracticesController < ApplicationController
   def sql;end
   def execute;end
   def db
+    @users = User.all
     render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
   def er
