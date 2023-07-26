@@ -1,8 +1,11 @@
 <%= turbo_frame_tag "items" do %>   
 <%= form_with url: '/practices' do |f|%>  
-          <%= f.text_area :name, class: 'mt-1 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x20"%>
+          <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x20"%>
           <%= turbo_frame_tag 'modal' do%>
-            <%= f.submit '答え合わせ', class: 'rounded bg-red-300 text-white font-bold py-2 px-2', data: {turbo_frame: 'modal'}%>
+            <%= f.submit '答え合わせ', class: 'rounded-full bg-gray-500 text-white font-bold py-3 px-3 mt-2', data: {turbo_frame: 'modal'}%>
          <% end%>
+            <%= button_tag type: "submit", name: 'execute', class: 'bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-3 border border-gray-400 rounded-full shadow' do%>
+              <i class="fa-solid fa-rotate pr-1"></i>実行する
+            <% end%>
          <% end%>
 <% end%>

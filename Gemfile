@@ -76,3 +76,7 @@ end
 
 # for debug
   gem "pry-rails"
+
+# for seed
+  gem 'faker'
+  gem 'gimei'
