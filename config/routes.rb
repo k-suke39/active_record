@@ -3,5 +3,14 @@ Rails.application.routes.draw do
 
   resources :lessons, only: [:index]
   resources :chapters, only: [:index]
-  resources :practices
+  resources :practices do
+    collection do
+      get 'editor'
+      get 'sql'
+      get 'execute'
+      get 'db'
+      get 'er'
+      get 'answer'
+    end
+  end
 end

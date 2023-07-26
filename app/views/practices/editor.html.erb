@@ -1,0 +1,8 @@
+<%= turbo_frame_tag "items" do %>   
+<%= form_with url: '/practices' do |f|%>  
+          <%= f.text_area :name, class: 'mt-1 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x20"%>
+          <%= turbo_frame_tag 'modal' do%>
+            <%= f.submit '答え合わせ', class: 'rounded bg-red-300 text-white font-bold py-2 px-2', data: {turbo_frame: 'modal'}%>
+         <% end%>
+         <% end%>
+<% end%>
