@@ -23,3 +23,5 @@ pin "@lezer/common", to: "https://ga.jspm.io/npm:@lezer/common@1.0.3/dist/index.
 pin "@lezer/highlight", to: "https://ga.jspm.io/npm:@lezer/highlight@1.1.6/dist/index.js"
 pin "style-mod", to: "https://ga.jspm.io/npm:style-mod@4.0.3/src/style-mod.js"
 pin "w3c-keyname", to: "https://ga.jspm.io/npm:w3c-keyname@2.2.8/index.js"
+
+pin "@rails/request.js", to: "https://ga.jspm.io/npm:@rails/request.js@0.0.8/src/index.js"
