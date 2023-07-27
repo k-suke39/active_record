@@ -1,5 +1,71 @@
 <%= turbo_frame_tag "items" do %>
   <%= form_with url: '/practices' do |f|%>  
-          <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x20", value: "SELECT * FROM users"%>
+          <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x3", value: "SELECT * FROM users"%>
+
   <% end%>
+   <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-5">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    タイトル
+                </th>
+                <th scope="col" class="px-5 py-3">
+                    説明
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    登録日
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    更新日
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                    Apple MacBook Pro 17"
+                </th>
+                <td class="px-6 py-4">
+                    Silverrrrrr
+                </td>
+                <td class="px-6 py-4">
+                    Laptop
+                </td>
+                <td class="px-6 py-4">
+                    $2999
+                </td>
+               
+             
+            </tr>
+          <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                    Microsoft Surface Pro
+                </th>
+                <td class="px-6 py-4">
+                    White
+                </td>
+                <td class="px-6 py-4">
+                    Laptop PC
+                </td>
+                <td class="px-6 py-4">
+                    $1999
+                </td>
+              
+            </tr>
+         <tr class="bg-white border-b">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                    Magic Mouse 2
+                </th>
+                <td class="px-6 py-4">
+                    Black
+                </td>
+                <td class="px-6 py-4">
+                    Accessories
+                </td>
+                <td class="px-6 py-4">
+                    $99
+                </td>
+            </tr>
+        </tbody>
+    </table>
 <% end%>

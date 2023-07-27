@@ -6,13 +6,13 @@ class PracticesController < ApplicationController
   end
 
   def create
+    @user = params[:content]
     render :new
   end
   def editor;end
   def sql;end
   def execute;end
   def db
-    @users = User.all
     render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
   def er
