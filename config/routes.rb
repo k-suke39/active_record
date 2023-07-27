@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :practices do
     collection do
       get 'editor'
-      get 'sql'
+      post 'sql'
       get 'execute'
       get 'db'
       get 'er'

@@ -9,7 +9,11 @@ class PracticesController < ApplicationController
     render :new
   end
   def editor;end
-  def sql;end
+  def sql
+     @execute_active_record_string = params[:name]
+     @execute_query_string = eval(@execute_active_record_string).to_sql
+     @execute_query = ActiveRecord::Base.connection.execute(@execute_query_string)
+   end
   def execute;end
   def db
     @users = User.all
