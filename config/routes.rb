@@ -5,12 +5,12 @@ Rails.application.routes.draw do
   resources :chapters, only: [:show]
   resources :practices do
     collection do
-      post 'sql'
       get 'db'
       get 'er'
       get 'answer'
-    end
+    end 
     member do
+      post 'sql'
       post 'judge'
       get 'editor'
       get 'sql'
