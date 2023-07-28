@@ -3,7 +3,11 @@ class PracticesController < ApplicationController
   end
 
   def show
-    @practice = Practice.find_by(id: params[:id])
+    begin 
+      @practice = Practice.find_by(id: params[:id])
+    rescue 
+      redirec_to lessons_path
+    end
   end
 
   def judge
@@ -25,7 +29,6 @@ class PracticesController < ApplicationController
   end
 
   def create
-    binding.pry
     @execute_active_record_string = params[:name]
     @execute_query_string = eval(@execute_active_record_string).to_sql
     @execute_query = ActiveRecord::Base.connection.execute(@execute_query_string)
@@ -35,7 +38,7 @@ class PracticesController < ApplicationController
   end
 
   def editor
-
+    @practice = Practice.find_by(id: params[:id])
   end
 
   def sql
@@ -46,7 +49,11 @@ class PracticesController < ApplicationController
    end
    render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
-  def execute;end
+
+  def execute
+     @practice = Practice.find_by(id: params[:id])
+     render layout: sql, content_type: 'text/vnd.turbo-stream.html'
+  end
 
   def er
     render layout: false, content_type: 'text/vnd.turbo-stream.html'

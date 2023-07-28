@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   resources :practices do
     collection do
       post 'sql'
-      get 'execute'
       get 'db'
       get 'er'
       get 'answer'
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
       post 'judge'
       get 'editor'
       get 'sql'
+      post 'execute'
       get 'answer'
     end
   end
