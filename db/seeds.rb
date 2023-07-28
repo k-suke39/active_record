@@ -46,6 +46,11 @@ Post.create!(
 )
 
 Post.create!(
+   title: 'ざっきーです',
+   description: 'やっぱりtwitterが一番いいよね、、!',
+)
+
+Post.create!(
    title: 'タナカです',
    description: 'lavastudio通ってます',
 )
@@ -62,12 +67,12 @@ Lesson.create!(
 
 Lesson.create!(
    lesson_type: '初級編',
-   description: '初級問題に挑戦してみましょう！',
+   description: '現在準備中です。',
 )
 
 Lesson.create!(
    lesson_type: '中級編',
-   description: '中級問題に挑戦してみましょう！',
+   description: '現在準備中です。',
 )
 
 Chapter.create!(
@@ -77,20 +82,32 @@ Chapter.create!(
 )
 
 Chapter.create!(
-   title: 'whereメソッドを使ってみよう!',
+   title: 'whereメソッドを使ってレコードを取得してみよう!',
+   order: 2,
+   lesson_id: 1
+)
+
+Chapter.create!(
+   title: 'whereメソッドを使って複数レコードを取得してみよう!',
    order: 2,
    lesson_id: 1
 )
 
 Practice.create!(
    example_answer: 'User.all',
-   description: 'usersテーブルから全てのレコードを取得してください',
+   description: 'allメソッドを使って、usersテーブルから全てのレコードを取得してください',
    chapter_id: 1,
 )
 
 Practice.create!(
    example_answer: 'Post.where(id: 2)',
-   description: 'postsテーブルからidが2のレコードを取得してください',
+   description: 'whereメソッドを使って、postsテーブルからidが2のレコードを取得してください',
+   chapter_id: 2,
+)
+
+Practice.create!(
+   example_answer: "Post.where(title: 'ざっきーです')",
+   description: 'whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
    chapter_id: 2,
 )
 
