@@ -2,14 +2,19 @@ Rails.application.routes.draw do
   root 'home#top'
 
   resources :lessons, only: [:index]
-  resources :chapters, only: [:index]
+  resources :chapters, only: [:show]
   resources :practices do
     collection do
-      get 'editor'
       post 'sql'
       get 'execute'
       get 'db'
       get 'er'
+      get 'answer'
+    end
+    member do
+      post 'judge'
+      get 'editor'
+      get 'sql'
       get 'answer'
     end
   end

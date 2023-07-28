@@ -84,11 +84,13 @@ Chapter.create!(
 
 Practice.create!(
    example_answer: 'User.all',
+   description: 'usersテーブルから全てのレコードを取得してください',
    chapter_id: 1,
 )
 
 Practice.create!(
    example_answer: 'Post.where(id: 2)',
+   description: 'postsテーブルからidが2のレコードを取得してください',
    chapter_id: 2,
 )
 

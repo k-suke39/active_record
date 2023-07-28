@@ -1,3 +1,4 @@
+<%= turbo_stream.replace "items" do %>
 <%= turbo_frame_tag "items" do %>
   <%= form_with url: '/practices' do |f|%>  
           <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x2", value: @execute_query_string || ""%>
@@ -28,4 +29,5 @@
     </table>
     </div>
     <% end%>
+<% end%>
 <% end%>

@@ -36,6 +36,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_070848) do
 
   create_table "practices", force: :cascade do |t|
     t.string "example_answer", null: false
+    t.string "description", null: false
     t.integer "chapter_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
