@@ -76,19 +76,19 @@ Lesson.create!(
 )
 
 Chapter.create!(
-   title: 'allメソッドを使ってみよう!',
+   title: '【CHAPTER1】allメソッドを使ってみよう!',
    order: 1,
    lesson_id: 1
 )
 
 Chapter.create!(
-   title: 'whereメソッドを使ってレコードを取得してみよう!',
+   title: '【CHAPTER2】whereメソッドを使ってレコードを取得してみよう!',
    order: 2,
    lesson_id: 1
 )
 
 Chapter.create!(
-   title: 'whereメソッドを使って複数レコードを取得してみよう!',
+   title: '【CHAPTER3】whereメソッドを使って複数レコードを取得してみよう!',
    order: 2,
    lesson_id: 1
 )
