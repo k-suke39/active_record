@@ -18,10 +18,12 @@
           </div>
           <div class="flex-grow">
             <p class="leading-relaxed text-base"><%= lesson.description %></p>
-            <%=link_to '問題を解いてみる', chapter_path(lesson), class: "mt-3 text-color-primary inline-flex items-center font-bold"%>
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
+         <%= link_to chapter_path(lesson), class: "mt-3 text-color-primary inline-flex items-center font-bold" do %>
+         問題を解いてみる
+         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+         </svg>
+         <% end %>
           </div>
         </div>
       </div>
