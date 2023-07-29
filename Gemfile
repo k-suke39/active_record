@@ -80,3 +80,8 @@ end
 # for seed
   gem 'faker'
   gem 'gimei'
+
+# for login
+  gem 'omniauth'
+  gem 'omniauth-github'
+  gem 'omniauth-rails_csrf_protection'
