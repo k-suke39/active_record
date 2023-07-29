@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'home#top'
 
+  get"/auth/:provider/callback"=>"sessions#create" 
+
   resources :lessons, only: [:index]
   resources :chapters, only: [:show]
   resources :practices do
