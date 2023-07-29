@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'home#top'
 
-  get"/auth/:provider/callback"=>"sessions#create" 
+  get "/auth/:provider/callback" => "sessions#create" 
+  delete "/logout" => "sessions#destroy" 
 
   resources :lessons, only: [:index]
   resources :chapters, only: [:show]
