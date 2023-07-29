@@ -95,19 +95,19 @@ Chapter.create!(
 
 Practice.create!(
    example_answer: 'User.all',
-   description: 'allメソッドを使って、usersテーブルから全てのレコードを取得してください',
+   description: '-CHAPTER1- allメソッドを使って、usersテーブルから全てのレコードを取得してください',
    chapter_id: 1,
 )
 
 Practice.create!(
    example_answer: 'Post.where(id: 2)',
-   description: 'whereメソッドを使って、postsテーブルからidが2のレコードを取得してください',
+   description: '-CHAPTER2- whereメソッドを使って、postsテーブルからidが2のレコードを取得してください',
    chapter_id: 2,
 )
 
 Practice.create!(
    example_answer: "Post.where(title: 'ざっきーです')",
-   description: 'whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
+   description: '-CHAPTER3- whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
    chapter_id: 2,
 )
 

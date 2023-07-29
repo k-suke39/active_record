@@ -2,8 +2,8 @@
   <%= turbo_frame_tag "items" do %>   
     <%= form_with url: judge_practice_path do |f|%>  
       <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "55x20" , placeholder: "モデル名.メソッド名の形で実行してください。現在allメソッド、whereメソッドのみ対応可能です"%>
-      <%= f.submit '答え合わせ', class: 'rounded-full bg-gray-500 text-white font-bold py-3 px-3 mt-2', data: {turbo_frame: 'modal'}%>
-      <%= button_tag type: "submit",  class: 'bg-white hover:bg-gray-100 text-gray-800 font-semibold py-3 px-3 border border-gray-400 rounded-full shadow', formaction: sql_practice_path, data: { turbo_method: :get} do%>
+      <%= f.submit '答え合わせ', class: 'rounded-full bg-gray-500  hover:bg-gray-300 text-white font-bold py-3 px-3 mt-2', data: {turbo_frame: 'modal'}%>
+      <%= button_tag type: "submit",  class: 'bg-white hover:bg-gray-200 text-gray-800 font-semibold py-3 px-3 border border-gray-800 rounded-full shadow', formaction: sql_practice_path, data: { turbo_method: :get} do%>
         <i class="fa-solid fa-rotate pr-1"></i>実行する
       <% end %>
     <% end %>
