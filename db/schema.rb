@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_27_070848) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_29_004051) do
   create_table "chapters", force: :cascade do |t|
     t.string "title", null: false
     t.integer "order", null: false
@@ -25,6 +25,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_27_070848) do
     t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "login_users", force: :cascade do |t|
+    t.string "provider", null: false
+    t.string "uid", null: false
+    t.string "name", null: false
+    t.string "image_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["provider", "uid"], name: "index_login_users_on_provider_and_uid", unique: true
   end
 
   create_table "posts", force: :cascade do |t|
