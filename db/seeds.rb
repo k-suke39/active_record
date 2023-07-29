@@ -76,38 +76,38 @@ Lesson.create!(
 )
 
 Chapter.create!(
-   title: '【CHAPTER1】allメソッドを使ってみよう!',
+   title: 'allメソッドを使ってみよう!',
    order: 1,
    lesson_id: 1
 )
 
 Chapter.create!(
-   title: '【CHAPTER2】whereメソッドを使ってレコードを取得してみよう!',
+   title: 'whereメソッドを使ってレコードを取得してみよう!',
    order: 2,
    lesson_id: 1
 )
 
 Chapter.create!(
-   title: '【CHAPTER3】whereメソッドを使って複数レコードを取得してみよう!',
+   title: 'whereメソッドを使って複数レコードを取得してみよう!',
    order: 2,
    lesson_id: 1
 )
 
 Practice.create!(
    example_answer: 'User.all',
-   description: 'allメソッドを使って、usersテーブルから全てのレコードを取得してください',
+   description: '-CHAPTER1- allメソッドを使って、usersテーブルから全てのレコードを取得してください',
    chapter_id: 1,
 )
 
 Practice.create!(
    example_answer: 'Post.where(id: 2)',
-   description: 'whereメソッドを使って、postsテーブルからidが2のレコードを取得してください',
+   description: '-CHAPTER2- whereメソッドを使って、postsテーブルからidが2のレコードを取得してください',
    chapter_id: 2,
 )
 
 Practice.create!(
    example_answer: "Post.where(title: 'ざっきーです')",
-   description: 'whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
+   description: '-CHAPTER3- whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
    chapter_id: 2,
 )
 
