@@ -1,9 +1,8 @@
-<%= render 'layouts/header'%>
-    <div class="flex flex-col text-center w-full mb-10 pt-10">
-      <h2 class="text-xs text-color-primary tracking-widest font-bold title-font mb-1">TRIAL</h2>
-      <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900"><%= @lesson.lesson_type %></h1>
-      <p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold"><%= @lesson.description %></p>
-    </div>
+<div class="flex flex-col text-center w-full mb-10 pt-10">
+  <h2 class="text-xs text-color-primary tracking-widest font-bold title-font mb-1">TRIAL</h2>
+  <h1 class="sm:text-3xl text-2xl font-bold title-font mb-4 text-gray-900"><%= @lesson.lesson_type %></h1>
+  <p class="lg:w-2/3 mx-auto leading-relaxed text-base font-bold"><%= @lesson.description %></p>
+</div>
 <% @chapters.each do |chapter|%>
 <div class="bg-white py-2">
   <div class=" px-4 md:px-8">
@@ -16,6 +15,5 @@
     </div>
   </div>
 </div>
-
 <% end%>
 
