@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get "/auth/:provider/callback" => "sessions#create" 
   delete "/logout" => "sessions#destroy" 
+  
+  namespace :admin do
+  end 
 
   resources :lessons, only: [:index]
   resources :chapters, only: [:show]
@@ -21,4 +24,5 @@ Rails.application.routes.draw do
       get 'answer'
     end
   end
+  
 end
