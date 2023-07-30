@@ -42,12 +42,19 @@ class PracticesController < ApplicationController
   end
 
   def sql
-     if params[:name]
-       @execute_active_record_string = params[:name]
-       @execute_query_string = eval(@execute_active_record_string).to_sql
-       @execute_query = ActiveRecord::Base.connection.execute(@execute_query_string)
-     end
-     render layout: false, content_type: 'text/vnd.turbo-stream.html'
+    disallowed_queries = ["create","save","save!","update","update!","delete","delete!","destroy","destroy!","delete_all","update_all","update_attribute", "update_columns", "update_column","destroy_all","increment!", "decrement!", "toggle!","touch"].freeze
+    if request_query = params[:name]
+      DISALLOWED_QUERIES.each do |query| 
+      if request_query.includes?(query)
+        @execute_query_string = ""
+        return render layout: false, content_type: 'text/vnd.turbo-stream.html'
+      end
+    end
+    @execute_active_record_string = params[:name]
+    @execute_query_string = eval(@execute_active_record_string).to_sql
+    @execute_query = ActiveRecord::Base.connection.execute(@execute_query_string)
+    end
+    render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
 
   def execute
