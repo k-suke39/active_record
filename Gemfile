@@ -82,7 +82,10 @@ end
   gem 'faker'
   gem 'gimei'
 
-# for login
+# for login general users
   gem 'omniauth'
   gem 'omniauth-github'
   gem 'omniauth-rails_csrf_protection'
+
+# for login admin users
+  gem 'sorcery'
