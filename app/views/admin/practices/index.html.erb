@@ -1,4 +1,59 @@
-<div>
-  <h1 class="font-bold text-4xl">Admin::Practices#index</h1>
-  <p>Find me in app/views/admin/practices/index.html.erb</p>
+<div class="mb-5 container relative overflow-x-auto shadow-md sm:rounded-lg">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    id 
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    解答例
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    説明
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    chapter_id
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Show</span>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Edit</span>
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    <span class="sr-only">Delete</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+             <% @practices.each do |practice| %>
+            <tr class="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <%= practice.id %>
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <%= practice.example_answer %>
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <%= link_to practice.description, admin_practice_path(practice) %>
+                </th>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    <%= practice.chapter_id %>
+                </th> 
+                <th  scope="row" class="px-6 py-4 text-right">
+                    <%= link_to "Show", admin_practice_path(practice), class: "font-medium text-blue-300 hover:underline"%>
+                </th>
+                <th  scope="row" class="px-6 py-4 text-right">
+                    <%= link_to "Edit", edit_admin_practice_path(practice), class: "font-medium text-green-300 hover:underline"%>
+                </th>
+                <th scope="row" class="px-6 py-4 text-right">
+                    <%= link_to "Delete", admin_practice_path(practice), data: { turbo_method: :delete }, class: "font-medium text-red-300 hover:underline"%>
+                </th>
+            </tr>
+           <% end %>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+   <%= link_to 'Create', new_admin_practice_path, class: "mt-5 bg-red-300 hover:bg-gray-300 text-white font-bold py-2 px-4 rounded-full"%>
 </div>

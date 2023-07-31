@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   namespace :admin do
     get 'login', to: 'user_sessions#new'
     post'login', to: 'user_sessions#create'
-    root "dashboards#index"
+    delete'logout', to: 'user_sessions#destroy'
+    root "lessons#index"
     resource :dashboard, only: %i[index]
     resources :lessons
     resources :chapters
