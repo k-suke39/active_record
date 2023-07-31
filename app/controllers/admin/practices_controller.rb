@@ -1,2 +1,2 @@
-class Admin::PracticesController < ApplicationController
+class Admin::PracticesController < Admin::BaseController
 end

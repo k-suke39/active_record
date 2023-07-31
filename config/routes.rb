@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get 'dashboards/index'
   root 'home#top'
 
   get "/auth/:provider/callback" => "sessions#create" 
   delete "/logout" => "sessions#destroy" 
   
   namespace :admin do
+    get 'dashboards/index'
     get 'login', to: 'user_sessions#new'
     post'login', to: 'user_sessions#create'
     root "dashboards#index"

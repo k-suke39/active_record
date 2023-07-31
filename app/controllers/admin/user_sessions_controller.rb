@@ -1,9 +1,8 @@
-class Admin::UserSessionsController < ApplicationController
-  layout 'admin/layouts/application'
+class Admin::UserSessionsController < Admin::BaseController
+  layout 'admin/layouts/admin_login'
   def new; end
   
   def create
-    binding.pry
     @admin_user = login(params[:email], params[:password])
 
     if @admin_user
