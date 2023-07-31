@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   
   namespace :admin do
     get 'login', to: 'user_sessions#new'
+    post'login', to: 'user_sessions#create'
+    resources :lessons
+    resources :chapters
+    resources :practices
   end 
 
   resources :lessons, only: [:index]
