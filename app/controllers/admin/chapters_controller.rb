@@ -16,7 +16,7 @@ class Admin::ChaptersController < Admin::BaseController
     if @chapter.save
       redirect_to admin_chapters_path, notice: '登録に成功しました'
     else  
-      render :edit, status: :unprocessable_entity, alert: '登録に失敗しました'
+      render :new, status: :unprocessable_entity, alert: '登録に失敗しました'
     end
   end
 
