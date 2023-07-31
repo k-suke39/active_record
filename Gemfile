@@ -89,3 +89,6 @@ end
 
 # for login admin users
   gem 'sorcery'
+
+# for ogp
+  gem "meta-tags"
