@@ -1,4 +1,4 @@
-class Admin::PracticesController < ApplicationController
+class Admin::PracticesController < Admin::BaseController
   def index
     @practices = Practice.all
   end
@@ -42,6 +42,6 @@ class Admin::PracticesController < ApplicationController
   private
 
   def practice_params
-    params.require(:practice).permit(:practice_type, :description)
+    params.require(:practice).permit(:example_answer, :description, :chapter_id)
   end
 end
