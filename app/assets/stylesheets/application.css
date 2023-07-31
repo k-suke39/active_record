@@ -42,3 +42,7 @@
 .logo a:hover {
   color: blue;
 }
+
+.active-tab {
+  color: #000;
+}
