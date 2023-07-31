@@ -92,3 +92,6 @@ end
 
 # for ogp
   gem "meta-tags"
+
+# for breadcrumbs
+  gem 'gretel'

@@ -16,7 +16,10 @@
       <%= render 'layouts/nortifications'%>
       <%= render 'layouts/alert_nortifications'%>
       <%= render 'layouts/header'%>
+      <div class="container">
+        <%= breadcrumbs separator: " / ", class: :logo%>
       <%= yield %>
+      </div>
       <%= turbo_frame_tag "modal" %>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
   </body>

@@ -1,3 +1,4 @@
+<% breadcrumb :practices, @practice.chapter %>
 <section class="text-gray-300">
   <div class="container px-5 py-6 mx-auto">
 
@@ -7,8 +8,8 @@
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-full bg-gray-100 p-8 rounded">
-      <%= link_to "エディタ", editor_practice_path(@practice), class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, tabs_target: "tab", action: "click->tabs#toggle" }  %>
-      <%= link_to "実行SQL/結果", sql_practice_path(@practice), data: {turbo: false}, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, tabs_target: "tab", action: "click->tabs#toggle" }  %>
+      <%= link_to "エディタ", editor_practice_path(@practice), class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, controller: "tabs",tabs_target: "tab",action: "click->tabs#toggle" }  %>
+      <%= link_to "実行SQL/結果", sql_practice_path(@practice), data: {turbo: false}, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, controller: "tabs",tabs_target: "tab", action: "click->tabs#toggle" }  %>
          <%= turbo_frame_tag :items, src: editor_practice_path(@practice), loading: :lazy do %>
            <h1>Loading...</h1> 
          <% end %>
@@ -17,10 +18,10 @@
       <div class="p-4 md:w-1/2 w-full">
         <div class="h-full bg-gray-100 p-8 rounded">
       <%= turbo_frame_tag 'replace' do %>
-      <%= link_to "ER図", er_practices_path, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, tabs_target: "tab", action: "click->tabs#toggle" }  %>
-      <%= link_to "テーブル", db_practices_path, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, tabs_target: "tab", action: "click->tabs#toggle" }  %>
+      <%= link_to "ER図", er_practices_path, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, controller: "tabs",tabs_target: "tab",action: "click->tabs#toggle"  }  %>
+      <%= link_to "テーブル", db_practices_path, class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, controller: "tabs",tabs_target: "tab", action: "click->tabs#toggle"  }  %>
        <% end %>
-      <%= link_to "想定結果", answer_practice_path(@practice), class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, tabs_target: "tab", action: "click->tabs#toggle" }  %>
+      <%= link_to "想定結果", answer_practice_path(@practice), class: "active sm:px-6 py-3 w-1/3 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-bold inline-flex items-center leading-none border-gray-200 hover:text-gray-900 tracking-wider",data: { turbo_frame: :items, controller: "tabs",tabs_target: "tab", action: "click->tabs#toggle" }  %>
            <%= turbo_frame_tag :itemss, src: er_practices_path do %>
              <h1>Loading...</h1> 
          <% end %>
@@ -28,7 +29,6 @@
       </div>
     </div>
   </div>
-
 </section>
 
 
