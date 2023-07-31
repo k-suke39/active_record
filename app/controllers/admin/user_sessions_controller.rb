@@ -7,7 +7,7 @@ class Admin::UserSessionsController < ApplicationController
     @admin_user = login(params[:email], params[:password])
 
     if @admin_user
-      redirect_to root_path
+      redirect_to admin_root_path
     else
       render :new
     end
