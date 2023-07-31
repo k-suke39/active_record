@@ -1,7 +1,8 @@
 <%= turbo_stream.replace "items" do %>
 <%= turbo_frame_tag "items" do %>
-  <%= form_with url: '/practices' do |f|%>  
-          <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "52x2", value: @execute_query_string || ""%>
+  
+  <%= form_with url: '' do |f|%>  
+        <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "52x2", value: @execute_query_string || ""%>
   <% end%>
   <% if @execute_query %>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
