@@ -1,5 +1,5 @@
-class Admin::UserSessionsController < ApplicationController
-  layout 'admin/layouts/application'
+class Admin::UserSessionsController < Admin::BaseController
+  layout 'admin/layouts/admin_login'
   def new; end
   
   def create
