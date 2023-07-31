@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   delete "/logout" => "sessions#destroy" 
   
   namespace :admin do
-    get 'dashboards/index'
     get 'login', to: 'user_sessions#new'
     post'login', to: 'user_sessions#create'
     root "dashboards#index"
