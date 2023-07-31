@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'dashboards/index'
   root 'home#top'
 
   get "/auth/:provider/callback" => "sessions#create" 
@@ -6,6 +7,12 @@ Rails.application.routes.draw do
   
   namespace :admin do
     get 'login', to: 'user_sessions#new'
+    post'login', to: 'user_sessions#create'
+    root "dashboards#index"
+    resource :dashboard, only: %i[index]
+    resources :lessons
+    resources :chapters
+    resources :practices
   end 
 
   resources :lessons, only: [:index]
