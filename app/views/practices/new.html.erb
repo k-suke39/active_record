@@ -31,7 +31,7 @@
         <i class="fa-brands fa-twitter text-3xl"></i> 
       <% end %>
         </div>
-      </div>
+</div>
       <h3 class="text-center text-gray-500 font-bold mt-2">正解です！次の問題にも挑戦してみましょう！</h3>
    
       <%= image_tag "undraw_Pair.png", class: "max-w-full" %>
@@ -40,7 +40,7 @@
     <%= link_to '戻る', practice_path(@practice), class: "bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 border border-gray-600 rounded shadow" %>  
   </div>
   <div class="items-right">
-    <%= link_to '次の問題', practice_path(@practice.id + 1), data: { turbo: false }, class: "bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 border border-gray-400 rounded shadow" %> 
+    <%= link_to '次の問題',  (@practice.id + 1 <= Practice.last.id) ? practice_path(@practice.id + 1) : lessons_path, data: { turbo: false }, class: "bg-white hover:bg-gray-100 text-gray-800 font-bold py-2 px-4 border border-gray-400 rounded shadow" %> 
   </div>
 </div>
 
