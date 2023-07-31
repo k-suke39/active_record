@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'home#top'
-
+  
   get "/auth/:provider/callback" => "sessions#create" 
   delete "/logout" => "sessions#destroy" 
   
@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :chapters
     resources :practices
   end 
+
+  get 'terms_of_service', to: 'home#terms_of_service'
+  get 'privacy_policy', to: 'home#privacy_policy'
 
   resources :lessons, only: [:index]
   resources :chapters, only: [:show]

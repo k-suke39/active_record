@@ -13,7 +13,7 @@
     <% else %>
       <%= button_to "/auth/github", method: :post, data: {turbo: "false"}, class: "inline-flex items-center bg-color-primary text-white py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out" do %>
         <%= content_tag :i, "", class: "fa-brands fa-github fa-fw" %>
-        <%= content_tag :p, "GitHub" %>
+        <%= content_tag :p, "ログイン" %>
       <% end %>
     <% end %>
   </div>
