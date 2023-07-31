@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'dashboards/index'
   root 'home#top'
 
   get "/auth/:provider/callback" => "sessions#create" 

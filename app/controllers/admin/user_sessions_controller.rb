@@ -3,7 +3,6 @@ class Admin::UserSessionsController < ApplicationController
   def new; end
   
   def create
-    binding.pry
     @admin_user = login(params[:email], params[:password])
 
     if @admin_user
