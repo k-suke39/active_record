@@ -1,99 +1,99 @@
-<%= turbo_stream.replace "itemss" do %>
-<%= turbo_frame_tag 'itemss' do %>
+<%= turbo_stream.replace "right_items" do %>
+<%= turbo_frame_tag 'right_items' do %>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
-	<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-		<thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-			<tr>
-				<th scope="col" class="px-6 py-3">
-					ID
-				</th>
-				<th scope="col" class="px-6 py-3">
-					NAME
-				</th>
-				<th scope="col" class="px-5 py-3">
-					EMAIL
-				</th>
-				<th scope="col" class="px-6 py-3">
-					PASSWORD
-				</th>
-				<th scope="col" class="px-6 py-3">
-					CREATED_AT
-				</th>
-				<th scope="col" class="px-6 py-3">
-					UPDATED_AT
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @users.each do |user| %>
-			<tr class="bg-white border-b">
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.id %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.name %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.email %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.password %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.created_at %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= user.updated_at %>
-				</th>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          ID
+        </th>
+        <th scope="col" class="px-6 py-3">
+          NAME
+        </th>
+        <th scope="col" class="px-5 py-3">
+          EMAIL
+        </th>
+        <th scope="col" class="px-6 py-3">
+          PASSWORD
+        </th>
+        <th scope="col" class="px-6 py-3">
+          CREATED_AT
+        </th>
+        <th scope="col" class="px-6 py-3">
+          UPDATED_AT
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+      <tr class="bg-white border-b">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.id %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.name %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.email %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.password %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.created_at %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= user.updated_at %>
+        </th>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
-	<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-		<thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-			<tr>
-				<th scope="col" class="px-6 py-3">
-					ID
-				</th>
-				<th scope="col" class="px-6 py-3">
-					TITLE
-				</th>
-				<th scope="col" class="px-5 py-3">
-					DESCRIPTION
-				</th>
-				<th scope="col" class="px-6 py-3">
-					CREATED_AT
-				</th>
-				<th scope="col" class="px-6 py-3">
-					UPDATED_AT
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<% @posts.each do |post| %>
-			<tr class="bg-white border-b">
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= post.id %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= post.title %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= post.description %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= post.created_at %>
-				</th>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= post.updated_at %>
-				</th>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          ID
+        </th>
+        <th scope="col" class="px-6 py-3">
+          TITLE
+        </th>
+        <th scope="col" class="px-5 py-3">
+          DESCRIPTION
+        </th>
+        <th scope="col" class="px-6 py-3">
+          CREATED_AT
+        </th>
+        <th scope="col" class="px-6 py-3">
+          UPDATED_AT
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+      <tr class="bg-white border-b">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= post.id %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= post.title %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= post.description %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= post.created_at %>
+        </th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= post.updated_at %>
+        </th>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 <% end %>
 <% end %>

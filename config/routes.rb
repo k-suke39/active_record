@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     post 'login', to: 'user_sessions#create'
     delete 'logout', to: 'user_sessions#destroy'
     root 'lessons#index'
-    resource :dashboard, only: %i[index]
     resources :lessons
     resources :chapters
     resources :practices

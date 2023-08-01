@@ -4,12 +4,13 @@ import { Controller } from "@hotwired/stimulus";
 export default class extends Controller {
   static targets = ["tab"];
   toggle(event) {
-    this.tabTargets.forEach((tab) => {
-      if (tab.classList.contains("active-tab")) {
-        tab.classList.remove("active-tab");
-      } else {
-        tab.classList.add("active-tab");
-      }
-    });
+  // クリックされたタブをactiveにする
+  event.currentTarget.classList.add("active-tab");
+  // クリックされていない他のタブからactiveを削除する
+  this.tabTargets.forEach((tab) => {
+    if (tab !== event.currentTarget) {
+      tab.classList.remove("active-tab");
+    }
+  });
   }
 }
