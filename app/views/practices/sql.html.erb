@@ -1,9 +1,9 @@
 <%= turbo_stream.replace "items" do %>
 <%= turbo_frame_tag "items" do %>
-  <% if @execute_query_string%>
-  <%= form_with url: '' do |f|%>  
-        <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "52x2", value: @execute_query_string%>
-  <% end%>
+  <% if @execute_query_string %>
+  <%= form_with url: '' do |f| %>
+        <%= f.text_area :name, class: 'mt-5 rounded bg-color-primary text-white font-bold focus:outline-none focus:ring-0 focus:ring-color-primary focus:border-transparent', size: "52x2", value: @execute_query_string %>
+  <% end %>
   <% end %>
   <% if @execute_query %>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
@@ -24,12 +24,12 @@
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                     <%= value %>
                 </th>
-            <% end%>    
+            <% end %>
             </tr>
            <% end %>
         </tbody>
     </table>
     </div>
-    <% end%>
-<% end%>
-<% end%>
+    <% end %>
+<% end %>
+<% end %>

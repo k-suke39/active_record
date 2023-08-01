@@ -1,19 +1,21 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   root 'home#top'
-  
-  get "/auth/:provider/callback" => "sessions#create" 
-  delete "/logout" => "sessions#destroy" 
-  
+
+  get '/auth/:provider/callback' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
   namespace :admin do
     get 'login', to: 'user_sessions#new'
-    post'login', to: 'user_sessions#create'
-    delete'logout', to: 'user_sessions#destroy'
-    root "lessons#index"
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+    root 'lessons#index'
     resource :dashboard, only: %i[index]
     resources :lessons
     resources :chapters
     resources :practices
-  end 
+  end
 
   get 'terms_of_service', to: 'home#terms_of_service'
   get 'privacy_policy', to: 'home#privacy_policy'
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
       get 'db'
       get 'er'
       get 'answer'
-    end 
+    end
     member do
       post 'sql'
       post 'judge'
@@ -35,5 +37,4 @@ Rails.application.routes.draw do
       get 'answer'
     end
   end
-  
 end

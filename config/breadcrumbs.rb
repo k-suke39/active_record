@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 crumb :root do
   link '<i class="fa fa-home"></i>'.html_safe, lessons_path, class: 'text-blue-500 hover:text-blue-600'
 end
@@ -11,9 +13,6 @@ crumb :practices do |chapter|
   link 'Practice'
   parent :chapters, chapter
 end
-
-
-
 
 # crumb :projects do
 #   link "Projects", projects_path

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChaptersController < ApplicationController
   def show
     @chapters = Chapter.where(lesson_id: params[:id])

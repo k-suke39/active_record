@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def default_meta_tags
     {
@@ -15,13 +17,13 @@ module ApplicationHelper
         description: :description,
         type: 'website',
         url: request.original_url,
-        image: image_url('ogp.png'), 
+        image: image_url('ogp.png'),
         local: 'ja-JP'
       },
       twitter: {
-        card: 'summary_large_image', 
+        card: 'summary_large_image',
         site: '@',
-        image: image_url('ogp.png') 
+        image: image_url('ogp.png')
       }
     }
   end

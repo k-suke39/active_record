@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -40,7 +42,7 @@ gem "redis", "~> 4.0"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -53,7 +55,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
   gem 'dotenv-rails'
 end
 
@@ -76,22 +78,30 @@ group :test do
 end
 
 # for debug
-  gem "pry-rails"
+gem "pry-rails"
 
 # for seed
-  gem 'faker'
-  gem 'gimei'
+gem 'faker'
+gem 'gimei'
 
 # for login general users
-  gem 'omniauth'
-  gem 'omniauth-github'
-  gem 'omniauth-rails_csrf_protection'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
 
 # for login admin users
-  gem 'sorcery'
+gem 'sorcery'
 
 # for ogp
-  gem "meta-tags"
+gem "meta-tags"
 
 # for breadcrumbs
-  gem 'gretel'
+gem 'gretel'
+
+# for lint
+gem 'rubocop'
+gem 'rubocop-performance'
+gem 'rubocop-rails'
+gem 'rubocop-rake'
+gem 'rubocop-rspec'
+gem 'erb_lint'
