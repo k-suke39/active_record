@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class PracticesController < ApplicationController
-  def index; end
 
   def show
     @practice = Practice.find_by(id: params[:id])
