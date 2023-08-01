@@ -11,7 +11,6 @@ Rails.application.routes.draw do
     post 'login', to: 'user_sessions#create'
     delete 'logout', to: 'user_sessions#destroy'
     root 'lessons#index'
-    resource :dashboard, only: %i[index]
     resources :lessons
     resources :chapters
     resources :practices
@@ -26,14 +25,12 @@ Rails.application.routes.draw do
     collection do
       get 'db'
       get 'er'
-      get 'answer'
     end
     member do
       post 'sql'
       post 'judge'
       get 'editor'
       get 'sql'
-      post 'execute'
       get 'answer'
     end
   end

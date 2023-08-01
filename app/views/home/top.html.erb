@@ -1,22 +1,22 @@
 <section id="home" class="pt-18 mb-30">
-	<div class="container">
-		<div class="flex flex-wrap">
-			<div class="w-full self-center lg:w-1/2">
-				<h1 class="text-red-500 font-bold text-6xl">ActiveRecordを練習</h1>
-				<h1 class="font-bold text-6xl mt-2">基礎を身につけよう</h1>
-				<h1 class="font-medium mb-10 mt-2 text-gray-500 text-xl">
-					ActiveRecorderは環境構築がいらない学習サービスです
-				</h1>
-				<%= button_to "/auth/github", method: :post, data: {turbo: "false"}, class: "bg-color-primary text-white py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out" do %>
-				<%= content_tag :p, "さっそく試してみる" %>
-				<% end %>
-			</div>
-			<div class="w-full self-end px-4 lg:w-1/2">
-				<div class="mt-10">
-					<img src="./assets/undraw_Developer.png" alt="developer" class="max-w-full mx-auto" />
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="flex flex-wrap">
+      <div class="w-full self-center lg:w-1/2">
+        <h1 class="text-red-500 font-bold text-6xl">ActiveRecordを練習</h1>
+        <h1 class="font-bold text-6xl mt-2">基礎を身につけよう</h1>
+        <h1 class="font-medium mb-10 mt-2 text-gray-500 text-xl">
+          ActiveRecorderは環境構築がいらない学習サービスです
+        </h1>
+        <%= button_to "/auth/github", method: :post, data: {turbo: "false"}, class: "bg-color-primary text-white py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out" do %>
+        <%= content_tag :p, "さっそく試してみる" %>
+        <% end %>
+      </div>
+      <div class="w-full self-end px-4 lg:w-1/2">
+        <div class="mt-10">
+          <img src="./assets/undraw_Developer.png" alt="developer" class="max-w-full mx-auto" />
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <%= render 'layouts/footer' %>

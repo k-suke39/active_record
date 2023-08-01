@@ -7,28 +7,28 @@
 <% end %>
 <% if @execute_query %>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-5">
-	<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-5">
-		<thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
-			<tr>
-				<% @execute_query.first.keys.each do |key| %>
-				<th scope="col" class="px-6 py-3">
-					<%= key %>
-				</th>
-				<% end %>
-			</tr>
-		</thead>
-		<tbody>
-			<% @execute_query.each do |row| %>
-			<tr class="bg-white border-b">
-				<% row.values.each do |value| %>
-				<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
-					<%= value %>
-				</th>
-				<% end %>
-			</tr>
-			<% end %>
-		</tbody>
-	</table>
+  <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-5">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 ">
+      <tr>
+        <% @execute_query.first.keys.each do |key| %>
+        <th scope="col" class="px-6 py-3">
+          <%= key %>
+        </th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @execute_query.each do |row| %>
+      <tr class="bg-white border-b">
+        <% row.values.each do |value| %>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+          <%= value %>
+        </th>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 <% end %>
 <% end %>
