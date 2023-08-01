@@ -2,27 +2,27 @@
 <html>
 
 <head>
-  <title>Active Recorder</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
-  <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-  <%= display_meta_tags(default_meta_tags) %>
+	<title>Active Recorder</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<%= csrf_meta_tags %>
+	<%= csp_meta_tag %>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" />
+	<%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+	<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+	<%= javascript_importmap_tags %>
+	<%= display_meta_tags(default_meta_tags) %>
 </head>
 
 <body>
-  <%= render 'layouts/nortifications' %>
-  <%= render 'layouts/alert_nortifications' %>
-  <%= render 'layouts/header' %>
-  <div class="container">
-    <%= breadcrumbs separator: " / ", class: :logo %>
-    <%= yield %>
-  </div>
-  <%= turbo_frame_tag "modal" %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
+	<%= render 'layouts/nortifications' %>
+	<%= render 'layouts/alert_nortifications' %>
+	<%= render 'layouts/header' %>
+	<div class="container">
+		<%= breadcrumbs separator: " / ", class: :logo %>
+		<%= yield %>
+	</div>
+	<%= turbo_frame_tag "modal" %>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.js"></script>
 </body>
 
 </html>

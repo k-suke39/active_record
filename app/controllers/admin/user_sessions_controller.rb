@@ -2,6 +2,7 @@
 
 module Admin
   class UserSessionsController < Admin::BaseController
+    skip_before_action :authenticate
     layout 'admin/layouts/admin_login'
     def new; end
 
