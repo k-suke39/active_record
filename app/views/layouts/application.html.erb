@@ -13,11 +13,11 @@
   </head>
 
   <body>
-      <%= render 'layouts/nortifications'%>
-      <%= render 'layouts/alert_nortifications'%>
-      <%= render 'layouts/header'%>
+      <%= render 'layouts/nortifications' %>
+      <%= render 'layouts/alert_nortifications' %>
+      <%= render 'layouts/header' %>
       <div class="container">
-        <%= breadcrumbs separator: " / ", class: :logo%>
+        <%= breadcrumbs separator: " / ", class: :logo %>
       <%= yield %>
       </div>
       <%= turbo_frame_tag "modal" %>

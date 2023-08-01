@@ -98,9 +98,10 @@ gem "meta-tags"
 # for breadcrumbs
 gem 'gretel'
 
-# for rubocop
+# for lint
 gem 'rubocop'
 gem 'rubocop-performance'
 gem 'rubocop-rails'
 gem 'rubocop-rake'
 gem 'rubocop-rspec'
+gem 'erb_lint'
