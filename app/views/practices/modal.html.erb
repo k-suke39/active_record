@@ -12,7 +12,7 @@
 				<div></div>
 				<h1 class="text-center text-red-300 font-bold text-5xl">正解</h1>
 				<div>
-					<%= link_to "https://twitter.com/share?url=#{request.original_url}&text=ActiveRecorderで学習してみたよ!&hashtags=ActiveRecorder", target: '_blank' do %>
+					<%= link_to "https://twitter.com/share?url=#{root_url}&text=ActiveRecorderで学習してみたよ!&hashtags=ActiveRecorder".gsub('&', "&\n"), target: '_blank' do %>
 					<i class="fa-brands fa-twitter text-3xl"></i>
 					<% end %>
 				</div>
