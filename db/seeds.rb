@@ -71,7 +71,7 @@ AdminUser.create!(
   first_name: 'keisuke',
   last_name: 'sakuma',
   email: 'pacdracoris@example.com',
-  passoword: 'pacdracoris'
+  password: 'pacdracoris'
 )
 
 Lesson.create!(
