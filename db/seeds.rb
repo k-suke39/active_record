@@ -67,7 +67,7 @@ Post.create!(
   description: 'すぐ眠くなります、、、'
 )
 
-Admin.user.create!(
+AdminUser.create!(
   first_name: 'keisuke',
   last_name: 'sakuma',
   email: 'pacdracoris@example.com',
