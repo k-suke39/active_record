@@ -42,3 +42,6 @@
 - Twitter 共有機能
 - 修了証機能
 
+## 画面遷移図
+
+Figma：https://www.figma.com/file/uJ2WAtE2PDNFApeGNd5sOU/ActiveRecorder?type=design&node-id=0%3A1&mode=design&t=QAkKcFt8p6tVpRb0-1
