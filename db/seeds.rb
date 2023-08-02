@@ -69,8 +69,8 @@ Post.create!(
 
 Admin.user.create!(
   first_name: 'keisuke',
-  last_name: 'sakuma'
-  email: 'pacdracoris@example.com'
+  last_name: 'sakuma',
+  email: 'pacdracoris@example.com',
   passoword: 'pacdracoris'
 )
 
