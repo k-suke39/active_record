@@ -3,62 +3,75 @@
 require 'faker'
 
 User.create!(
-  email: 'lava_studio_syuunana@test.com',
-  name: 'TanakaYogini',
+  email: 'satoh@example.com',
+  name: '佐藤さとこ',
   password: 'password'
 )
 
 User.create!(
-  email: 'debug_love@test.com',
-  name: 'YamamotoDebug',
+  email: 'tanaka@example.com',
+  name: '田中なた子',
   password: 'password'
 )
 
 User.create!(
-  email: 'zwitter@test.com',
-  name: 'TsuzakiYushitarou',
+  email: 'yamamoto@example.com',
+  name: '山本もと美',
   password: 'password'
 )
 
 User.create!(
-  email: 'zon100@test.com',
-  name: 'AbekawaZon100',
+  email: 'abe@example.com',
+  name: '阿部太郎',
+  password: 'password'
+)
+
+User.create!(
+  email: 'yamada@example.com',
+  name: '山田マヤ',
   password: 'password'
 )
 
 Post.create!(
-  title: 'ガクです',
-  description: 'Rails基礎が難しいですにゃー'
+  title: '佐藤です',
+  description: 'プログラミング楽しい！'
 )
 
 Post.create!(
-  title: 'ざっきーです',
-  description: 'XじゃなくてZwitterやろうぜ!'
+  title: '山田です',
+  description: 'Xやろうぜ!'
 )
 
 Post.create!(
-  title: 'yushiです',
-  description: '勉強会やりすぎ'
+  title: '田中です',
+  description: 'いい天気ですね！'
 )
 
 Post.create!(
-  title: 'ハヤシです',
+  title: '山本です',
   description: '娘っちが可愛いです'
 )
 
 Post.create!(
-  title: 'ざっきーです',
-  description: 'やっぱりtwitterが一番いいよね、、!'
+  title: '山田です',
+  description: 'やっぱりtwitterが一番いいよね!'
 )
 
 Post.create!(
-  title: 'タナカです',
-  description: 'lavastudio通ってます'
+  title: '阿部です',
+  description: '犬の散歩に行ってきました'
 )
 
 Post.create!(
-  title: 'デバッグ姉さんです',
-  description: 'binding.pryと結婚します'
+  title: '阿部です',
+  description: 'すぐ眠くなります、、、'
+)
+
+Admin.user.create!(
+  first_name: 'keisuke',
+  last_name: 'sakuma'
+  email: 'pacdracoris@example.com'
+  passoword: 'pacdracoris'
 )
 
 Lesson.create!(
@@ -90,7 +103,7 @@ Chapter.create!(
 
 Chapter.create!(
   title: 'whereメソッドを使って複数レコードを取得してみよう!',
-  order: 2,
+  order: 3,
   lesson_id: 1
 )
 
@@ -107,7 +120,7 @@ Practice.create!(
 )
 
 Practice.create!(
-  example_answer: "Post.where(title: 'ざっきーです')",
-  description: '-CHAPTER3- whereメソッドを使って、postsテーブルからtitleがざっきーですのレコードを取得してください',
-  chapter_id: 2
+  example_answer: "Post.where(title: '山田です')",
+  description: '-CHAPTER3- whereメソッドを使って、postsテーブルからtitleが山田ですのレコードを取得してください',
+  chapter_id: 3
 )
