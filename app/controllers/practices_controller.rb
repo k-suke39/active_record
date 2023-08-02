@@ -61,7 +61,7 @@ class PracticesController < ApplicationController
   end
 
   def set_warning_queries
-    @warning_queries = ["create", "delete", "update", "delete_all", "update_attributes", "update_column"]
+    @warning_queries = ["create", "delete", "update", "delete_all", "update_attributes", "update_column", "Admin", "Login"]
   end
 
   def safe_query?(query)
