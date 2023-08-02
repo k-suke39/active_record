@@ -49,4 +49,4 @@
 ## ER 図
 
 - https://dbdiagram.io/d/64b6184b02bd1c4a5e3e17e7
-[![Image from Gyazo](https://i.gyazo.com/69c04bd03b9021f6b7c096f16859427f.png)](https://gyazo.com/69c04bd03b9021f6b7c096f16859427f)
+  [![Image from Gyazo](https://i.gyazo.com/1bc2f8e89c29d79ff0db72e09a817c68.png)](https://gyazo.com/1bc2f8e89c29d79ff0db72e09a817c68)
