@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 crumb :root do
-  link '<i class="fa fa-home"></i>'.html_safe, lessons_path, class: 'text-blue-500 hover:text-blue-600'
+  link '<i class="fa fa-home"></i>'.html_safe, lessons_path
 end
 
 crumb :chapters do |chapter|
@@ -9,9 +9,9 @@ crumb :chapters do |chapter|
   parent :root
 end
 
-crumb :practices do |chapter|
+crumb :practices do |practice|
   link 'Practice'
-  parent :chapters, chapter
+  parent :chapters, 1
 end
 
 # crumb :projects do
