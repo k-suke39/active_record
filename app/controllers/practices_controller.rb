@@ -26,9 +26,10 @@ class PracticesController < ApplicationController
   def sql
     if params[:name] && !safe_query?(params[:name])
       render layout: false, content_type: 'text/vnd.turbo-stream.html'
-    end
+    else
       execute_active_record_string = params[:name]
       execute_query(execute_active_record_string)
+    end
     render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
 
@@ -60,7 +61,7 @@ class PracticesController < ApplicationController
   end
 
   def set_warning_queries
-    @warning_queries = ["create", "delete", "update", "delete_all", "update_attributes", "update_column", "Admin", "Login"]
+    @warning_queries = ["create", "delete", "update", "delete_all", "update_attributes", "update_column", "Admin", "Login", "current_user"]
   end
 
   def safe_query?(query)
@@ -68,8 +69,9 @@ class PracticesController < ApplicationController
   end
 
   def execute_query(query_string)
-    @execute_query = eval(query_string)
-    @execute_query = @execute_query.is_a?(Array) ? @execute_query : Array(@execute_query)
+    
+      @execute_query = eval(query_string)
+      @execute_query = @execute_query.is_a?(Array) ? @execute_query : Array(@execute_query)
   end
 
   def render_modal_with_result(result)
