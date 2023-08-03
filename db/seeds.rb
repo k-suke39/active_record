@@ -102,7 +102,7 @@ Chapter.create!(
 )
 
 Chapter.create!(
-  title: 'whereメソッドを使って複数レコードを取得してみよう!',
+  title: 'find_byメソッドを使ってレコードを取得してみよう!',
   order: 3,
   lesson_id: 1
 )
@@ -120,7 +120,7 @@ Practice.create!(
 )
 
 Practice.create!(
-  example_answer: "Post.where(title: '山田です')",
-  description: '-CHAPTER3- whereメソッドを使って、postsテーブルからtitleが山田ですのレコードを取得してください',
+  example_answer: "Post.find_by(title: '山田です')",
+  description: '-CHAPTER3- find_byメソッドを使って、postsテーブルからtitleが山田ですのレコードを取得してください',
   chapter_id: 3
 )
