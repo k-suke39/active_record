@@ -12,8 +12,8 @@ class PracticesController < ApplicationController
     if @warning_queries.any? { |str| answer_record.include?(str) }
       render_modal_with_result(false) and return
     end
-    example_answer_query = ActiveRecord::Base.connection.execute(eval(@practice.example_answer).to_sql)
-    answer_record_query = ActiveRecord::Base.connection.execute(eval(answer_record).to_sql)
+    example_answer_query = eval(@practice.example_answer)
+    answer_record_query = eval(answer_record)
     render_modal_with_result(example_answer_query == answer_record_query)
   rescue StandardError
     render_modal_with_result(false)
@@ -26,10 +26,9 @@ class PracticesController < ApplicationController
   def sql
     if params[:name] && !safe_query?(params[:name])
       render layout: false, content_type: 'text/vnd.turbo-stream.html'
-    else
-      @execute_active_record_string = params[:name]
-      execute_query(@execute_active_record_string)
     end
+      execute_active_record_string = params[:name]
+      execute_query(execute_active_record_string)
     render layout: false, content_type: 'text/vnd.turbo-stream.html'
   end
 
@@ -69,8 +68,8 @@ class PracticesController < ApplicationController
   end
 
   def execute_query(query_string)
-    @execute_query_string = eval(query_string).to_sql
-    @execute_query = ActiveRecord::Base.connection.execute(@execute_query_string)
+    @execute_query = eval(query_string)
+    @execute_query = @execute_query.is_a?(Array) ? @execute_query : Array(@execute_query)
   end
 
   def render_modal_with_result(result)
